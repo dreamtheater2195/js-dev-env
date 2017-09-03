@@ -16,7 +16,11 @@
     "test:watch": "npm run test -- --watch",
     "generate-mock-data": "babel-node buildScripts/generateMockData",
     "prestart-mockapi": "npm run generate-mock-data",
-    "start-mockapi": "json-server --watch src/api/db.json --port 3001"
+    "start-mockapi": "json-server --watch src/api/db.json --port 3001",
+    "clean-dist": "rimraf ./dist && mkdir dist",
+    "prebuild": "npm-run-all clean-dist test lint",
+    "build": "babel-node buildScripts/build.js",
+    "postbuild": "babel-node buildScripts/distServer.js"
   },
   "repository": {
     "type": "git",
@@ -28,6 +32,9 @@
     "url": "https://github.com/dreamtheater2195/js-dev-env/issues"
   },
   "homepage": "https://github.com/dreamtheater2195/js-dev-env#readme",
+  "dependencies": {
+    "whatwg-fetch": "^2.0.3"
+  },
   "devDependencies": {
     "babel-cli": "6.16.0",
     "babel-core": "6.17.0",
@@ -61,7 +68,6 @@
     "webpack": "1.13.2",
     "webpack-dev-middleware": "1.8.4",
     "webpack-hot-middleware": "2.13.0",
-    "webpack-md5-hash": "0.0.5",
-    "whatwg-fetch": "^2.0.3"
+    "webpack-md5-hash": "0.0.5"
   }
 }
