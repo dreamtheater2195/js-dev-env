@@ -1,1 +1,1 @@
-{"version":3,"sources":["webpack:///webpack:///src/index.css"],"names":[],"mappings":"AAAA,KACE,uBACA,UAAY,CAGd,SACE,WAAa","file":"main.541d3de820cc5915015bece68e34f410.css","sourcesContent":["body {\n  font-family: 'Sans-Serif';\n  color: pink;\n}\n\ntable th {\n  padding: 6px;\n}\n\n\n\n/** WEBPACK FOOTER **\n ** webpack:///src/index.css\n **/"],"sourceRoot":""}
+{"version":3,"sources":[],"names":[],"mappings":"","file":"main.541d3de820cc5915015bece68e34f410.css","sourceRoot":""}
